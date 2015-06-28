@@ -73,7 +73,7 @@ _PROMPT() {
     esac
     
     # Set PS1
-    PS1="${_title}${_line1} ${_time}${_div1}${_user}${_sep}${_host} ${_div2} ${_errmsg}${_jobs}${_cwd}${_git}${_new_line}${_line2} "
+    PS1="${_title}${_new_line}${_line1} ${_time}${_div1}${_user}${_sep}${_host} ${_div2} ${_errmsg}${_jobs}${_cwd}${_git}${_new_line}${_line2} "
     export PS2='continue >'
     export PS4='+$BASH_SOURCE[$LINENO]: '
 }
