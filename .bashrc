@@ -68,20 +68,27 @@ _PROMPT() {
           _time="${_br1}${_time24h}${_br2}" 
 
     # Exit status string
-    [ $EXIT_STATUS != 0 ] && local _errmsg="${_br1}${bold}${red}${EXIT_STATUS}${_br2}"
+    [ $EXIT_STATUS != 0 ] && local _errmsg="${_br1}\[${bold}${red}\]${EXIT_STATUS}${_br2}"
 
     # User
     if (( UID == 0 )); then
-        local _user="${red}root${reset}" _title_user="root"
+        local _user="\[${red}\]root\[${reset}\]" _title_user="root"
     else
-        local _user="${green}\u${reset}" _title_user="\u"
+        local _user="\[${green}\]\u\[${reset}\]" _title_user="\u"
     fi
 
     # Hostname
     if [[ $SSH_TTY ]]; then
-        local _host="${blue}\h" _title_ssh="ssh://" _title_host="\h"
+        local _host="\[${blue}\]\h" _title_ssh="ssh://" _title_host="\h"
     else
-        local _host="${yellow}\h" _title_ssh="" _title_host="\h"
+        local _host="\[${yellow}\]\h" _title_ssh="" _title_host="\h"
+    fi
+    
+    # Jobs
+    if [[ $(echo -n `jobs | egrep -c \[[:digit:]+\]`) != 0 ]]; then
+        local _jobs="${_br1}\[${bold}${green}\]${_jobcount}${_br2}"
+    else
+        local _jobs=""
     fi
 
     # Get the Git shell 
@@ -89,29 +96,22 @@ _PROMPT() {
 
     if [[ ${_git_branch} != "" ]] && [[ ${PWD} =~ "/.git" ]]; then
         # CWD is inside a .git directory
-        local _git="${_br1}${red}${_git_branch}${_br2}" _title_git="[${_git_branch}]"
+        local _git="${_br1}\[${red}\]${_git_branch}${_br2}" _title_git="[${_git_branch}]"
     elif [[ ${_git_branch} != "" ]]; then
         local _title_git="[${_git_branch}]" 
         if [[ -z $(git status -s) ]] && ( [[ ${_git_branch} == "master" ]] || [[ ${_git_branch} == "master=" ]] ); then
             # CWD is inside an unmodified master branch
-            local _git="${_br1}${green}${_git_branch}${_br2}" 
+            local _git="${_br1}\[${green}\]${_git_branch}${_br2}" 
         elif [[ -z $(git status -s) ]]; then
             # CWD is inside an unmodified branch
-            local _git="${_br1}${yellow}${_git_branch}${_br2}" 
+            local _git="${_br1}\[${yellow}\]${_git_branch}${_br2}" 
         else
             # CWD is inside a modified branch
-            local _git="${_br1}${red}${_git_branch}${_br2}"
+            local _git="${_br1}\[${red}\]${_git_branch}${_br2}"
         fi
     else
         # Not inside a Git branch
         local _git="" _title_git="" 
-    fi
-
-    # Jobs
-    if [[ -n $(jobs) ]]; then
-        local _jobs="${_br1}${bold}${green}${_jobcount}${_br2}"
-    else
-        local _jobs=""
     fi
 
     # Set title in xterm/rxvt
