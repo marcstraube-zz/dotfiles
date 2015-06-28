@@ -1,0 +1,5 @@
+# Add to history instead of overriding it
+shopt -s histappend
+
+# Window size sanity check
+shopt -s checkwinsize
