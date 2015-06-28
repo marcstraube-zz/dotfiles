@@ -60,10 +60,10 @@ _PROMPT() {
           _cwd_full="\w" _new_line="\n" _jobcount="\j"
 
     # Set variables for PS1 string
-    local _br1="${bold}${black}[${reset}" _br2="${bold}${black}]${reset}" \
-          _div1="${bold}${black} » ${reset}" _div2="${bold}${black}╺─╸${reset}" \
-          _line1="${red}┌─╼${reset}" _line2="${_new_line}${red}└────╼${reset}" \
-          _sep="${reset}@" _title_sep="@" 
+    local _br1="\[${bold}${black}\][\[${reset}\]" _br2="\[${bold}${black}\]]\[${reset}\]" \
+          _div1="\[${bold}${black}\] » \[${reset}\]" _div2="\[${bold}${black}\]╺─╸\[${reset}\]" \
+          _line1="\[${red}\]┌─╼\[${reset}\]" _line2="\[${red}\]└────╼\[${reset}\]" \
+          _sep="\[${reset}\]@" _title_sep="@" 
     local _cwd="${_br1}${_cwd_short}${_br2}" _title_cwd="[${_cwd_short}]" \
           _time="${_br1}${_time24h}${_br2}" 
 
@@ -123,7 +123,7 @@ _PROMPT() {
     esac
     
     # Set PS1
-    PS1="${_title}${_line1} ${_time}${_div1}${_user}${_sep}${_host} ${_div2} ${_errmsg}${_jobs}${_cwd}${_git}${_line2} "
+    PS1="${_title}${_line1} ${_time}${_div1}${_user}${_sep}${_host} ${_div2} ${_errmsg}${_jobs}${_cwd}${_git}${_new_line}${_line2} "
     export PS2='continue >'
     export PS4='+$BASH_SOURCE[$LINENO]: '
 }
