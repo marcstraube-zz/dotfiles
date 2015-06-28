@@ -3,3 +3,6 @@ shopt -s histappend
 
 # Window size sanity check
 shopt -s checkwinsize
+
+# Disable PC speaker
+setterm -blength 0
