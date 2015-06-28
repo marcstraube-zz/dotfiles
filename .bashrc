@@ -92,7 +92,7 @@ _PROMPT() {
         local _git="${_br1}${red}${_git_branch}${_br2}" _title_git="[${_git_branch}]"
     elif [[ ${_git_branch} != "" ]]; then
         local _title_git="[${_git_branch}]" 
-        if [[ -z $(git status -s) ]] && [[ ${_git_branch} == "master" ]]; then
+        if [[ -z $(git status -s) ]] && ( [[ ${_git_branch} == "master" ]] || [[ ${_git_branch} == "master=" ]] ); then
             # CWD is inside an unmodified master branch
             local _git="${_br1}${green}${_git_branch}${_br2}" 
         elif [[ -z $(git status -s) ]]; then
