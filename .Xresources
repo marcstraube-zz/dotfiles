@@ -1,0 +1,64 @@
+! color settings ---------------------------------------------------------------
+
+*background: rgb:20/20/20
+*foreground: rgb:c2/c2/b0
+*color0:     rgb:16/16/16
+*color1:     rgb:e8/4f/4f
+*color2:     rgb:b7/ce/42
+*color3:     rgb:fe/a6/3c
+*color4:     rgb:66/aa/bb
+*color5:     rgb:b7/41/6e
+*color6:     rgb:6d/87/8d
+*color7:     rgb:dd/dd/dd
+*color8:     rgb:66/66/66
+*color9:     rgb:d2/3d/3d
+*color10:    rgb:bd/e0/77
+*color11:    rgb:ff/e8/63
+*color12:    rgb:aa/cc/bb
+*color13:    rgb:e1/6a/98
+*color14:    rgb:42/71/7b
+*color15:    rgb:cc/cc/cc
+
+
+! Xterm settings ---------------------------------------------------------------
+
+# Explicitly set terminal name
+XTerm*termName: xterm-256color
+
+# Always enable UTF-8
+XTerm*utf8: 2
+
+# Set font
+XTerm*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*font1: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm*font2: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*font3: -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+XTerm*font4: -*-terminus-medium-*-*-*-22-*-*-*-*-*-iso10646-*
+XTerm*font5: -*-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
+XTerm*font6: -*-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
+
+# Fix the "Alt" key
+XTerm*metaSendsEscape: true
+
+# Save more lines (default is 1024)
+Xterm*saveLines: 8192
+
+# Enable clip board
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+
+# Change character class
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+# Select URL's and filesystem paths  on triple click
+XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+
+# Scroll down on key press
+XTerm*ScrollKey: true
+
+# Disable fullscreen on Alt + Enter (because it conflicts with mc)
+XTerm*fullscreen: never
+
+! Urxvt  settings --------------------------------------------------------------
+
+# Save more lines
+Urxvt.saveLines: 8192
