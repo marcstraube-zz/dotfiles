@@ -20,14 +20,19 @@ else
     alias grep='grep -in'
 fi
 
-alias install='sudo pacman -S'
-alias update='sudo pacman -Syu'
-alias install-aur='yaourt -S'
-alias update-aur='yaourt -Syua'
-alias start='sudo systemctl start '
-alias restart='sudo systemctl restart '
-alias stop='sudo systemctl stop '
-alias status='systemctl status '
-alias iptables-list='iptables -L -v --line-numbers'
+# Aliases for pacman and yaourt
+alias pacinst='sudo pacman -S'
+alias pacup='sudo pacman -Syu'
+alias aurinst='yaourt -S'
+alias aurup='yaourt -Syua'
+
+# Aliases for systemctl
+alias dstart='sudo systemctl start '
+alias drestart='sudo systemctl restart '
+alias dstop='sudo systemctl stop '
+alias dstatus='systemctl status '
+
+# Other applications
 alias ff='exec firefox && exit 0'
 alias excuse='fortune bofh-excuses'
+alias nvim='export TERM=xterm-256color; nvim'
