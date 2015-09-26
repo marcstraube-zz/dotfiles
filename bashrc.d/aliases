@@ -35,4 +35,3 @@ alias dstatus='systemctl status '
 # Other applications
 alias ff='exec firefox && exit 0'
 alias excuse='fortune bofh-excuses'
-alias nvim='export TERM=xterm-256color; nvim'

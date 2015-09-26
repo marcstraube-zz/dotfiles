@@ -1,0 +1,11 @@
+# NVM - Node Version Manager
+export NVM_DIR="/home/rebel/.nvm"
+
+# This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Set active version of Node.js
+nvm use 4.1 
+
+# Activate bash_completion
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion

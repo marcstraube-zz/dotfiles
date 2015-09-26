@@ -15,6 +15,3 @@ if [ -d ${HOME}/.bashrc.d ]; then
     done
 fi
 
-# NVM - Node Version Manager
-export NVM_DIR="/home/rebel/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
