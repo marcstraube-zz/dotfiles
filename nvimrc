@@ -3,8 +3,8 @@
 "
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim     " Set the runtime path to inclue Vundle
-call vundle#begin("~/.vim/bundle")    " Init Vundle
+set rtp+=~/.Vundle/Vundle.vim         " Set the runtime path to inclue Vundle
+call vundle#begin("~/.Vundle")        " Init Vundle
 
 Plugin 'VundleVim/Vundle.vim'         " Let Vundle manage Vundle
 
