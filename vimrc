@@ -26,6 +26,7 @@ Plugin 'tomtom/tlib_vim'              " Dependency for vim-snipmate
 Plugin 'garbas/vim-snipmate'          " Text and code templates
 Plugin 'godlygeek/tabular'            " Text aligning
 Plugin 'sjl/gundo.vim'                " Visualize undo tree
+Plugin 'lukaszb/vim-web-indent'       " Better indentation for JavaScript and HTML
 
 call vundle#end()                     " End Vundle. All Plugins must be added before this line.
 filetype plugin indent on
