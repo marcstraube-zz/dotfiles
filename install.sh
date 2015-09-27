@@ -6,6 +6,7 @@ ln -s $(pwd)/bash_profile ~/.bash_profile
 ln -s $(pwd)/bashrc ~/.bashrc
 ln -s $(pwd)/profile ~/.profile
 ln -s $(pwd)/profile.d ~/.profile.d
+ln -s $(pwd)/fortunes ~/fortunes
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/nvimrc ~/.nvimrc
 mkdir -p ~/.vim/after

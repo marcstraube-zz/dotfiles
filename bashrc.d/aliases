@@ -35,3 +35,4 @@ alias dstatus='systemctl status '
 # Other applications
 alias ff='exec firefox && exit 0'
 alias excuse='fortune bofh-excuses'
+alias devquote='strfile ~/fortunes{,.dat} >&/dev/null && ponysay $(fortune ~/fortunes)'
