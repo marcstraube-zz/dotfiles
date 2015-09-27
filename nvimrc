@@ -84,7 +84,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_css_checkers = ['phpcs']
+let g:syntastic_css_checkers = ['csslint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:syntastic_json_checkers = ['jsonlint']
+let g:syntastic_less_checkers = ['lessc']
+let g:syntastic_php_checkers = ['php','phpcs','phpmd']
+let g:syntastic_sass_checkers = ['sassc']
+let g:syntastic_scss_checkers = ['sassc']
+let g:syntastic_twig_checkers = ['twiglint']
+let g:syntastic_xml_checkers = ['xmllint']
 
