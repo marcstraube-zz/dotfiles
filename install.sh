@@ -7,6 +7,8 @@ ln -s $(pwd)/bashrc ~/.bashrc
 ln -s $(pwd)/profile ~/.profile
 ln -s $(pwd)/profile.d ~/.profile.d
 ln -s $(pwd)/fortunes ~/fortunes
+ln -s $(pwd)/gitmessage ~/.gitmessage
+ln -s $(pwd)/gitignore_global ~/.gitignore_global
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/nvimrc ~/.nvimrc
 mkdir -p ~/.vim/after
