@@ -29,13 +29,8 @@ XTerm*termName: xterm-256color
 XTerm*utf8: 2
 
 # Set font
-XTerm*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-XTerm*font1: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-XTerm*font2: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-XTerm*font3: -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
-XTerm*font4: -*-terminus-medium-*-*-*-22-*-*-*-*-*-iso10646-*
-XTerm*font5: -*-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
-XTerm*font6: -*-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
+XTerm*faceName: Liberation Mono:size=10:antialias=false
+XTerm*font: 7x13
 
 # Fix the "Alt" key
 XTerm*metaSendsEscape: true
