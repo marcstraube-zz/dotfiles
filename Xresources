@@ -22,38 +22,40 @@
 
 ! Xterm settings ---------------------------------------------------------------
 
-# Explicitly set terminal name
-XTerm*termName: xterm-256color
+! Explicitly set terminal name
+xterm*termName: xterm-256color
 
-# Always enable UTF-8
-XTerm*utf8: 2
+! Always enable UTF-8
+xterm*utf8: 2
 
-# Set font
-XTerm*faceName: Liberation Mono:size=10:antialias=false
-XTerm*font: 7x13
+! Set font
+xterm*faceName: Liberation Mono
+xterm*faceSize: 11
+xterm*font: 7x13
 
-# Fix the "Alt" key
-XTerm*metaSendsEscape: true
+! Fix the "Alt" key
+xterm*metaSendsEscape: true
 
-# Save more lines (default is 1024)
-Xterm*saveLines: 8192
+! Save more lines (default is 1024)
+xterm*saveLines: 8192
 
-# Enable clip board
-XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+! Enable clip board
+xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 
-# Change character class
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+! Change character class
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-# Select URL's and filesystem paths  on triple click
-XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+! Select URLs and filesystem paths  on triple click
+xterm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 
-# Scroll down on key press
-XTerm*ScrollKey: true
+! Scroll down on key press
+xterm*ScrollKey: true
 
-# Disable fullscreen on Alt + Enter (because it conflicts with mc)
-XTerm*fullscreen: never
+! Disable fullscreen on Alt + Enter (because it conflicts with mc)
+xterm*fullscreen: never
+
 
 ! Urxvt  settings --------------------------------------------------------------
 
-# Save more lines
+! Save more lines
 Urxvt.saveLines: 8192
