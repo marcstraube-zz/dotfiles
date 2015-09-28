@@ -15,6 +15,7 @@ Plugin 'qpkorr/vim-bufkill'           " Kill a buffer without closing a window o
 Plugin 'scrooloose/nerdtree'          " Filetree browser
 Plugin 'scrooloose/nerdcommenter'     " Commenter
 Plugin 'scrooloose/syntastic'         " Syntax checker
+Plugin 'ivalkeen/nerdtree-execute'    " Execute files from within NERDTree
 Plugin 'kien/ctrlp.vim'               " Fast file navigation
 Plugin 'jlanzarotta/bufexplorer'      " Buffer explorer
 Plugin 'tpope/vim-fugitive'           " Git repository management
