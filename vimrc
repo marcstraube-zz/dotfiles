@@ -20,6 +20,8 @@ Plugin 'kien/ctrlp.vim'               " Fast file navigation
 Plugin 'jlanzarotta/bufexplorer'      " Buffer explorer
 Plugin 'tpope/vim-fugitive'           " Git repository management
 Plugin 'tpope/vim-surround'           " Manipulate 'surroundings' (parentheses, brackets, ...)
+Plugin 'tpope/vim-repeat'             " enable repeating supported plugin maps with '.'
+Plugin 'Raimondi/delimitMate'         " Auto completion for quotes, parens, etc.
 Plugin 'majutsushi/tagbar'            " Class browser
 Plugin 'freeo/vim-kalisi'             " Colorscheme
 Plugin 'MarcWeber/vim-addon-mw-utils' " Dependency for vim-snipmate
@@ -27,6 +29,7 @@ Plugin 'tomtom/tlib_vim'              " Dependency for vim-snipmate
 Plugin 'garbas/vim-snipmate'          " Text and code templates
 Plugin 'godlygeek/tabular'            " Text aligning
 Plugin 'sjl/gundo.vim'                " Visualize undo tree
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}  " Write HTML code faster
 Plugin 'lukaszb/vim-web-indent'       " Better indentation for JavaScript and HTML
 Plugin 'marcstraube/fortunes.vim'     " Add a fortune on F5 
 Plugin 'lervag/vimtex'                " Support for writing LaTeX documents
