@@ -33,6 +33,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}  " Write HTML code faster
 Plugin 'lukaszb/vim-web-indent'       " Better indentation for JavaScript and HTML
 Plugin 'marcstraube/fortunes.vim'     " Add a fortune on F5 
 Plugin 'lervag/vimtex'                " Support for writing LaTeX documents
+Plugin 'rking/ag.vim'                 " Source code search with ag
+Plugin 'amiorin/vim-project'          " Project management
 
 call vundle#end()                     " End Vundle. All Plugins must be added before this line.
 filetype plugin indent on
@@ -47,6 +49,7 @@ filetype plugin indent on
 set encoding=utf8                     " Set Vim's encoding to UTF-8
 set mouse=a                           " Enable mouse in console
 set number                            " Show line numbers
+set ruler                             " Show line an column number of the cursor position
 set wrap                              " Wrap lines
 set linebreak                         " Break lines at word
 set showbreak=+++                     " Prefix for broken lines  

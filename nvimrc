@@ -31,6 +31,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}  " Write HTML code faster
 Plugin 'lukaszb/vim-web-indent'       " Better indentation for JavaScript and HTML
 Plugin 'marcstraube/fortunes.vim'     " Add a fortune on F5 
 Plugin 'lervag/vimtex'                " Support for writing LaTeX documents
+Plugin 'rking/ag.vim'                 " Source code search with ag
+Plugin 'amiorin/vim-project'          " Project management
 
 call vundle#end()                     " End Vundle. All Plugins must be added before this line.
 filetype plugin indent on
@@ -43,6 +45,7 @@ filetype plugin indent on
 " NeoVim configuration
 "
 set number                            " Show line numbers
+set ruler                             " Show line an column number of the cursor position
 set wrap                              " Wrap lines
 set linebreak                         " Break lines at word
 set showbreak=+++                     " Prefix for broken lines  
@@ -68,6 +71,10 @@ if &t_Co >= 256 || has("gui_running")
     set background=light
 endif
 
+if (exists('+colorcolumn'))
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=7
+endif
 
 "
 " Key remapping
@@ -111,3 +118,8 @@ let g:syntastic_scss_checkers = ['sassc']
 let g:syntastic_twig_checkers = ['twiglint']
 let g:syntastic_xml_checkers = ['xmllint']
 
+"
+" Ag configuration
+"
+let g:agprg="<custom-ag-path-goes-here> --vimgrep"
+let g:ag_working_path_mode="r"
