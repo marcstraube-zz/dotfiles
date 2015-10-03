@@ -29,7 +29,7 @@ xterm*termName: xterm-256color
 xterm*utf8: 2
 
 ! Set font
-xterm*faceName: Liberation Mono
+xterm*faceName: Literation Mono Powerline:style=Regular
 xterm*faceSize: 11
 xterm*font: 7x13
 
