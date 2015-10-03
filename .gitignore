@@ -1,3 +1,6 @@
 *.swp
 *.tmp
 fortunes
+Vendor/
+vim/autoload/
+nvim
