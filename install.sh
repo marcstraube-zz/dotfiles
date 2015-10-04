@@ -15,6 +15,7 @@ dotfiles=( \
 	"nvim" \
 	"nvimrc" \
 	"nethackrc" \
+	"eslintrc" \
 )
 repositories=( \
 	"junegunn/vim-plug.git" \
